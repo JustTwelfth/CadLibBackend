@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadLibBackend", "CadLibBackend.csproj", "{CA755D3A-2BFE-4BC4-900D-22BFDE6FB4FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA755D3A-2BFE-4BC4-900D-22BFDE6FB4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA755D3A-2BFE-4BC4-900D-22BFDE6FB4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA755D3A-2BFE-4BC4-900D-22BFDE6FB4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA755D3A-2BFE-4BC4-900D-22BFDE6FB4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {866E2C3C-94FF-4647-8DC9-106FFDCCF414}
+	EndGlobalSection
+EndGlobal
