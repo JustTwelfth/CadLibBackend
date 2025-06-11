@@ -36,6 +36,25 @@ public class ParametersController : ControllerBase
 
         return Ok(await query.ToListAsync());
     }
+    [HttpGet("search-by-cdeid")]
+    public async Task<ActionResult<IEnumerable<ParameterDetailsDto>>> GetParametersByObjectName(
+[FromQuery] int cdeid)
+    {
+        var query =
+            from pd in _context.ParamDefs
+            join ps in _context.ParametersStrs on pd.IdParamDef equals ps.IdParamDef
+            join os in _context.ObjectsShadows on ps.IdObject equals os.IdObject
+            where os.IdObject == cdeid
+            select new ParameterDetailsDto
+            {
+                ObjectId = os.IdObject,
+                ParamDefId = pd.IdParamDef,
+                ParamCaption = pd.Caption,       // Используем Caption вместо Name
+                ParamValue = ps.Value
+            };
+
+        return Ok(await query.ToListAsync());
+    }
     [HttpPut("update")]
     public async Task<IActionResult> UpdateParameter([FromBody] UpdateParameterRequest request)
     {
